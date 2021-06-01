@@ -1,0 +1,114 @@
+
+Platform Independent
+WORA
+
+Open Source - till java 11
+
+OOPS
+2 types of programming 
+- Procedural (C) - Divide a problem into functions
+
+int x,y;
+int add() {
+	return x + y;	
+}
+
+int sub() {
+	return x - y;	
+}
+
+
+- OOPS (C++)
+
+class Calc {
+	int x,y;
+	int add() {
+		return x + y;	
+	}
+
+	int sub() {
+		return x - y;	
+	}
+}
+
+JAVA SE
+JAVA EE
+
+Download and Setup Java
+1. Java 11 download
+2. Install
+3. Environment Setup
+
+JDK :
+- Java compiler - javac
+- Java doc (Java documentation (in .html format))
+- jar (java archives)
+
+.rar files (resource archive)
+.war files (web archives)
+
+VS Code
+Eclipse
+
+First Java Program :
+- Every java program start with class
+- Class name should start with capital letter
+- Class name should be same as file name (because byte code always created with class name)
+- Class name start with alphabet or special symbol (underscore, dollar)
+
+javac ClassName.java
+- it will compile the code, convert source code to byte code
+
+java ClassName
+- it will execute the code, convert byte code to machine code
+
+javac comes from JDK
+java comes from JRE
+
+Main method
+- Entry point of java program
+- if main is not defined than the entry point is unknown to JRE
+
+public - global, which is accessible for all, from anywhere
+private - accessible within only class
+protected - can be accessed within a package using inheritance
+default - its not a keyword, its scope can be accessed by any class but within same package
+
+Why main is public ?
+- JRE uses main : java <ByteCode>
+- Java command triggers JRE, JRE starts searching from main
+- JRE load our class in memory
+- JRE is outside our code directory
+
+
+Why Static ?
+- Static things are loaded into memory when class is loaded...
+
+Why void ?
+- Main is entry point, it returns nothing...
+
+Main method parameters:
+ - String args[]
+ - main has command line arguments
+
+Command line arguments
+- we can make our own command
+- we can pass any number of arguments, that's why array is used
+- data type of command line arguments could be anything, so it makes it String type of data.
+
+
+System.out.println()
+- println - print in new line
+- println comes from out object, which is pre-defined in java
+- out object belongs to PrintStream class
+- out is a member of System
+- System class is used for input, output and error
+  (System.in, System.out, System.err)
+
+java FirstClass 10
+java FirstClass 10 20
+java FirstClass 10 30 40 50
+java FirstClass 10 20 40 50 60 90
+
+
+
