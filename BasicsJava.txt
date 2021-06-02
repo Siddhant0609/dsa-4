@@ -1,0 +1,74 @@
+Data Types in Java
+- Primitive
+- Non-Primitive (Reference data type)
+
+- primitive have fixed memory size
+- non-primitive follows dynamic memory allocation
+
+- primitive data types do not have references
+- non-primitive referes to something
+
+- primitive do not have any methods
+- non-primitive have methods
+
+1. Keywords for primitive, no keywords for non-primitive
+2. non-primitive derived from primitive    ???????
+3. primitive are pre-defined, non-primitve are user defined
+4. primitive should have a value, non-primitive can be null
+
+Integrals
+- byte  - 1 byte
+- short - 2 bytes
+- int   - 4 bytes
+- long  - 8 bytes
+
+1 byte = 8 bit
+1 bit +, -
+7 bit number
+-2 ^ 7 to 2 ^ 7 - 1
+-128 to 127
+
+Use of bytes data type
+- small range of values
+- file handling
+- networking
+
+Decimal
+- Float (strictfp)
+- Double
+
+Char - 2 byte
+- hold single character only
+
+Boolean - size depends on OS
+- True
+- False
+
+Input
+Scanner
+- will collect buffered input
+- scanner is a buffer
+
+============================================
+Employee Salary Slip
+Emp ID : 
+Emp Name : 
+Basic Salary : 20000
+Earnings
+HRA : House Rent Allowance : 20%
+DA : Dearness Allowance : 10%
+TA : Travelling Allowance : 15%
+MA : Medical Allowance : 15%
+
+Deduction
+PF : Provident Fund : 10%
+TDS : Tax Deducted at Source : 10%
+
+Net Salary = Basic Salary + Earnings - Deduction
+
+===============================================
+
+Loops, If Else, Switch case
+
+Loop
+Labeled Loop
