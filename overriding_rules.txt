@@ -1,0 +1,41 @@
+final
+super vs this
+overriding method vs variable
+Multi-level hierarchy
+
+final
+- when we want to freeze a value
+- 3 ways to use final : class, method, variable
+
+super vs this
+- child constructor automatically call parent's constructor
+- implicit call
+- in case we want to call parameterised constructor of parent class than we need to write super explicitly
+- if we comment parent's default constructor than it will give compile error
+- so we have to use super in child's default constructor
+
+
+Overriding rules
+1. Weaker Access Rule
+Scope - private, default(not reserved keyword), protected, public
+
+Packages - group of classes - modularity - similar classes will be together
+
+package name 
+- com - commercial
+- org - organization
+
+private < default < protected < public
+
+- we can't make override method to lower scope, means weaker access
+- If parent't method is protected, than child method cannot be default or private...
+
+
+2. CoVariant return type rule
+  - we can return more features in overrided function
+
+
+
+
+
+
