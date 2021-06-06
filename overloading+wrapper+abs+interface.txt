@@ -1,0 +1,73 @@
+Overloading
+Wrapper
+Autoboxing
+Abstract
+Interface
+Lambda
+Default
+Static
+
+Overloading
+- number of arguments can change
+- number of arguments can be different
+- type of arguments can be different
+- order of arguments can be different
+
+Overriding vs Overloading
+- IS-A relation is must in overriding
+- No need of IS-A relation in overloading
+
+- In overriding arguments must be same, return type is covariant
+- Arguments can change and it is not dependent on return type
+
+- Concept of weaker access in overriding
+- No weaker access rule for overloading
+
+- In overriding we generally show that parent's method is outdated, so we use overriding to show updation...
+- In overloading logic is same, but arguments are different...
+
+TypePromotion
+- int
+- widening
+- wrapper (same type)
+- var args (either same or widening)
+
+
+Abstract
+- Abstract class - whose object cannot be created
+- we can declare one or more abstract as well as concrete method
+- Normal class cannot have abstract method
+
+- Abstract Method - here we force the child class to implement this method
+- Abstract method can never be final
+- There is no body of abstract method
+
+Why we create abstract method ?
+- we are setting the standard
+- Logic will be different in each child class, but standard is same for all.
+
+
+Interface
+- Prototype
+- Interface are 100% abstract, while abstract classes are partially abstract.
+
+Prototype - What to do...
+Class - How to do...
+
+- there could be any number of interface that we can implement
+- Interface is not flexible
+
+
+Interface Use Ways
+- Class (once class is created now objects will keep on creating)
+- Object (now when we create object, then class will be created)
+  - Lazy loading, class will be loaded when we create object
+- Lambda
+
+
+
+
+
+
+
+
