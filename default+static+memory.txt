@@ -1,0 +1,72 @@
+Multiple Inheritance
+Default
+Static
+Memory Management
+String / StringBuffer / StringBuilder
+======================================
+
+Multiple Inheritance
+- No ambiguity problem ??????????
+
+- Interface do not have constructor. Classes have constructor.
+- Interface are binded with there name. Classes are binded with there objects...
+
+Java 8 onwards...
+Interfaces are not 100% abstract from java 8 onwards
+
+When we implement only one interface then there is no ambiguity problem.
+When we implement 2 interfaces then it will get confused that which method should I implement. So my class will ask me to override those methods
+
+=======================================
+
+Static
+- when we create object of a class then it makes that number of copies
+- so if we make some variable static, then it will come into the memory only once, and after that we can change it
+
+class variable vs instance variable
+class variable will be binded with class only and instance variable won't come untill object is created...
+
+Utility Class
+- final, private constructor, static methods...
+===========================================================
+
+Memory Management
+
+Heap is divided into 2 parts
+- Young generation (eden, S1, S2)
+  - When a new object is created than it is saved in eden space
+  - Behind the scene there is program running GC- Garbage collector - its a thread
+  - Thread is code in execution, example : main is a thread, so our program is single threaded
+  - Grabage collector is a slave thread, main is the master thread
+
+cmd : jvisualvm
+cmd : jconsole
+
+======================================================
+
+Strings / StringBuffer / StringBuilder
+
+- Internally char[]
+- String name = "Ravi" -> char name[] = {'R','a','v',,'i'}
+- Pre-defined class in java
+- String is a final class
+- String objects can be created in 2 ways
+  - Using String literal : String name = "Ravi";
+  - Using Object Style   : String name = new String("Ravi");
+- String objects are immutable
+
+StringPool
+- String uses StringPool
+
+When we create a string object
+- then there is a heap where string object is created.
+- and whenever string object is created in heap then it is stored inside String Pool
+- If object already exist in pool then it will refer to same address
+
+
+
+
+
+
+
+
