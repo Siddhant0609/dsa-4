@@ -1,0 +1,31 @@
+Strings
+- StringLiteral
+- StringPool
+- StringBuffer 
+  - single threaded program
+- StringBuilder
+  - methods are not synchronized...
+- String Methods
+====================================
+
+Exception Handling
+ - try
+ - catch
+ - throw
+ - throws
+ - finally
+
+Checked - exceptions that are checked at compile time
+Unchecked - exceptions that are not checked at compile time, Error and RuntimeException classes and there subclasses are unchecked and rest of the classes are checked exception...
+
+
+Built-in Exceptions
+User-defined Exception
+
+
+
+
+
+
+
+
