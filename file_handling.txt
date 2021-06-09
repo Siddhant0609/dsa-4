@@ -1,0 +1,32 @@
+Exception Handling
+- try-with-resource
+- calc
+- User-defined
+
+File Handling
+- Text or Byte data read write
+- Serialization / DeSerialization
+
+Read
+Write
+
+Streams - Flow of data
+
+Text - Reader, Writer (abstract)
+Byte - InputStream, OutputStream (abstract)
+
+IS-A Serialization
+- if we serialize parent, then child will be serialized automatically
+
+Another case
+- Only child is serializable
+ - it will serialize parent + child
+ - but while doing deserialization, only parent const will be called
+ - because deserialization only happens when class is serializable...
+
+HAS-A Serialization
+
+
+
+
+
