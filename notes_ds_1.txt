@@ -1,0 +1,150 @@
+DS Algo
+
+What ?
+Data Structure
+- management of data
+- storing and organizing data
+- perform CRUD operations
+- efficient data modification and accessibility
+
+- collection of data, relationship among them
+- functions and operations that can be applied on data
+
+Why ?
+- Google Map - Shortest Path
+- Indexing of web pages
+- OS - Queue
+- Searching
+- Sorting
+==============================
+Stack - Undo Operation, Browser back functionality
+Graph - Social Networking Site
+Tree - Folder OS
+Queue - Used to schedule jobs, used in networking to handle congestion
+==============================
+
+Algorithm
+- Sequential Steps for solving a problem
+
+Measures of Performance
+- Time
+  - Amount of processing
+  - Number of operations
+- Space or Extra Space
+- Network
+
+Time taken is propotional to number of operations and input size
+
+Best Case 	- constant / input favor the algo... 
+Average Case 	- linear (based on some condition)
+Worst Case	- linear
+
+order of growth
+- time of execution is linearly dependent on the length of array
+- we generally ignore lower order terms and leading term constant
+
+- omega = best case = exact or lower order of growth
+- theta = average case = exact order of growth
+- Big O = worst case = Linear time
+
+=============================================================
+Total Processing = Number of times each element get processed * number of elements (inputs)
+
+Example 1 :
+computer(int n) {
+int x = 100;
+int y = 10;
+int sum = x + y + n;
+}
+Constant - O(1)
+
+Example 2:
+compute(){
+for(i = 0; i < 100; i++) {
+    // logic...
+ }
+}
+Constant - c * 100 = O(1)
+
+Example 3:
+compute(n){
+for(i = 0; i < n; i++) {
+    // logic...
+ }
+}
+c*n = O(n)
+
+
+Example 4:
+compute(n){
+for(i = 0; i <= n; i++) {
+	System.out.println(Math.pow(i,2));
+    }
+}
+c*n = O(n)
+
+Example 5:
+compute(n){
+   if(n % 2 == 0) {
+       return;
+   }
+   for(i = 0; i < n; i++) {
+	System.out.println(Math.pow(i,2));
+   }
+}
+c*n = O(n)
+
+
+Example 6:
+compute(n){
+   for(i = 0; i < n; i++) {
+	for(j = 1; j<= n; j++)
+	System.out.println(Math.pow(i,2));
+   }
+}
+O(n ^ 2)
+
+Example 6:
+compute(n){
+   for(i = 0; i < n; i++) {
+	for(j = 1; j<= n; j++)
+	   break;
+	}
+   }
+}
+O(n)
+
+Example 7:
+compute(n){
+   for(i = 0; i < n; i=i+c) {
+	System.out.println(Math.pow(i,2));
+   }
+}
+O(n)
+
+
+Example 8:
+compute(n){
+   int c = 3;
+   for(i = 1; i < n; i=i*c) {
+	// Logic...
+   }
+}
+3^1, 3^2, 3^3, 3^4 .... 3^k
+logc ^ n
+
+Rate of growth
+Constant	1
+Logarthmic	logn
+Linear		n
+Linear Log	nlogn
+Quadratic	N ^ 2
+exponential	2 ^ n
+
+
+
+
+
+
+
+
