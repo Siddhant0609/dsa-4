@@ -1,0 +1,108 @@
+Introduction to Array
+- simplest data structure
+- same kind (homogeneous)
+- contiguous memory allocation
+- access using index
+
+Good Parts of Array
+- it provides random access
+  - base address + index * size
+- cache friendly = faster access
+
+Ways to declare array
+- int x[] = {10,20,30};
+- int []x = {10,20,30};
+- int x[] = new int[]{10,20,30};
+- int x[] = new int[5];
+
+Dynamic Array
+ArrayList<Integer> list;
+
+- No fixed size
+- No contiguous memory
+
+==============================================
+To find duplicate element : Time : O(N), Space : O(1)
+arr = [2,3,7,4,5,7,8]
+
+i = 0 to n - 1
+check for sign of arr(abs(arr[i])) >= 0
+if positive then :
+   make it negative : arr(abs(arr[i])) = -arr(abs(arr[i]))
+else :
+   the ith element is a repetition
+==============================================
+
+Leader Element in Array
+x = [10,20,11,33,9,8,12,3,2]
+leader 1 : 33
+leader 2 : 12
+leader 3 : 3
+leader 4 : 2
+
+==============================================
+
+Find the Missing Number
+arr = [3,1,2,5]
+missing num = 4
+
+Approach 1
+range = 1 + 2 + 3 + 4 + 5 = 15
+sum of original arr = 1 + 2 + 3 + 5 = 11
+missing = 15 - 11 = 4
+problem with this approach : overflow error when number is too large
+
+Approach 2
+XOR
+0 0 = 0
+1 1 = 0
+0 1 = 1
+1 0 = 1
+
+==============================================
+Zig Zag Array
+a < b > c < d > e < f >
+arr = [4,7,6,1,5,9,10]
+output = 4,7,1,6,5,10,9
+
+0 to n - 1
+i > i + 1
+i < i + 1
+
+==============================================
+Pair Sum
+arr = [1,4,5,6,3,6,8]
+k = 10
+pair : 6,4
+
+1. Naive Approach
+2. Hashing
+3. 2 Pointer
+
+==============================================
+Find element that is unique (Asked in Amazon)
+arr = [1,2,1,1,2,3,4,3,5,5,6,6]
+o/p = 4
+
+==============================================
+Sort 0 and 1
+arr = [0,0,0,1,1,1,0,1,0,1,1,0,0]
+o/p = [0,0,0,0,0,0,0,1,1,1,1,1,1]
+
+Solve in O(n)
+
+==============================================
+DNF - Dutch National Flag
+Sort 0 and 1 and 2
+arr = [0,0,0,1,1,2,0,2,2,1,1,2,0]
+o/p = [0,0,0,0,0,1,1,1,1,2,2,2,2]
+
+Try 2 pointer approach
+Hint : Maintain low, mid and high pointer
+     : Low and mid = 0, high = n-1
+If element is 0 then swap (low, mid) : low++, mid++
+If element is 1 then mid++
+If element is 2 then swap (low, mid) : high--
+
+
+
