@@ -1,8 +1,11 @@
+import java.util.Arrays;
 
 public class PairSumTwoPointer {
 
 	static void pairSum(int arr[]) {
-		int k = 9;
+//		int k = 9;
+		int k = 11;
+		Arrays.sort(arr);
 		int i = 0;
 		int j = arr.length - 1;
 		while(i < j) {
