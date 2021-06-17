@@ -1,0 +1,82 @@
+Single Number :
+- every element appear twice except for one
+- find the number occurring odd number of times
+
+Approach 1 : Brute Force
+Approach 2 : Hashing
+Approach 3 : XOR
+XOR / 2 Pointer
+===================================================
+
+How many numbers are smaller than current number ?
+arr = [4,7,3,8,2,1]
+o/p = [3,4,2,5,1,0]
+
+Approach 1 : Brute
+Approach 2 : Hashing
+Approach 3 : Pre-Computation Technique
+           - Prefix Sum / Suffix Sum
+           - Prefix Max / Suffix Max
+	   - Prefix Min / Suffix Min
+==================================================
+Prefix Sum
+
+for(int i = 1; i < n; i++) {
+    arr[i] += arr[i-1];
+}
+So it will create prefix array or we can change our original array
+
+So if we have Q queries :
+O(Q)
+int result = arr[right] - arr[left - 1]; // O(1)
+TC : O(Q + N)
+
+if(left == 0) {
+   return arr[right];
+}
+
+==================================================
+Prefix Max
+pmax[n]
+pmax[0] = arr[0]
+for(i = 1 to n - 1) {
+   pmax[i] = max(pmax[i - 1], arr[i])
+}
+
+
+Suffix Max
+int smax[n];
+smax[n - 1] = arr[n - 1];
+for(i = n - 2; i >= 0l i--) {
+   smax[i] = max(smax[i + 1], arr[i])
+}
+
+==============================================
+Maximise the expression
+given arr[] = {}
+and p,q,r
+solve the expression : Max(p * arr[i] + q * arr[j] + r * arr[k])
+and there is one condition : i < j < k
+
+Brute Force :
+int ans = Integer.MIN;
+for(int i = 0 to n - 1) {
+   for(int j = i + 1 to n - 1) {
+	for(int k = j + 1 to n - 1) {
+		ans = Math.max(ans, p*arr[i] + q*arr[j] + r*arr[k])
+	}
+   }
+}
+
+==============================================
+
+Water Trapping Problem / Histogram Problem
+
+
+
+
+
+
+
+
+
