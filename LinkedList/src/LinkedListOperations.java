@@ -127,6 +127,48 @@ public class LinkedListOperations<T> {
 		System.out.println(n + "element is " + p.data);
 	}
 	
+//	void detectLoop() {
+//		Node<T> slow = start;
+//		Node<T> fast = start;
+//		if(start != null) {
+//			while(fast != null && fast.next != null) {
+//				slow = slow.next;
+//				fast = fast.next.next;
+//				if(slow == fast) {
+//					System.out.println("Cycle Present");
+//					return;
+//				}
+//			}
+//			System.out.println("No Cycle Present...");
+//		}
+//	}
+	
+	void detectLoop() {
+		Node<T> slow = start;
+		Node<T> fast = start;
+		if(start != null) {
+			while(fast != null && fast.next != null) {
+				slow = slow.next;
+				fast = fast.next.next;
+				if(slow == fast) {
+					break;
+				}
+			}
+			if(slow != fast) {
+				System.out.println("No Cycle Present...");
+				return;
+			}
+			
+			slow = start;
+			while(slow.next != fast.next) {
+				slow = slow.next;
+				fast = fast.next;
+			}
+			fast.next = null;
+			
+		}
+	}
+	
 	void print() {
 		Node<T> temp = start;
 		while(temp != null) {
@@ -165,6 +207,8 @@ public class LinkedListOperations<T> {
 //		operations.print();
 		
 		operations.findNthFromEnd(4);
+		
+		operations.detectLoop();
 
 	}
 
