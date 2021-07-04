@@ -1,0 +1,148 @@
+// class Solution {
+
+// public ListNode partition(ListNode head, int x) {
+// ListNode lowerHead=new ListNode(0);
+// ListNode lowerTail= lowerHead;
+// ListNode higherHead =new ListNode(0);
+// ListNode higherTail = higherHead;
+
+// while (head!=null){
+//     if (head.val<x){
+//     lowerTail.next = head;
+//     lowerTail = head;
+//     }else{
+//     higherTail.next = head;
+//     higherTail = head;
+//     }
+//     head = head.next;
+//     }
+//     higherTail.next = null;
+//     lowerTail.next = higherHead.next;
+// return lowerHead.next;
+// }
+// }
+// /**
+//  * Definition for singly-linked list.
+//  * public class ListNode {
+//  *     int val;
+//  *     ListNode next;
+//  *     ListNode() {}
+//  *     ListNode(int val) { this.val = val; }
+//  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//  * }
+//  */
+class Solution {
+    public ListNode partition(ListNode head, int x) {
+        if(head==null || head.next==null){
+            return head;
+        }
+        ListNode traversal=head;
+        ListNode smallHead=null ,smallEnd=null;
+        
+        ListNode listHead=null, listEnd=null;
+        while(traversal !=null){
+            
+            if(x>traversal.val){
+                if(smallHead==null){
+                    smallHead=traversal;
+                    smallEnd=traversal;
+                        
+                }
+                else{
+                    smallEnd.next=traversal;
+                    smallEnd=smallEnd.next;
+                }
+            }
+            else{
+                if(listHead==null){
+                    listHead=traversal;
+                    listEnd=traversal;
+                }
+                else{
+                    listEnd.next=traversal;
+                    listEnd=listEnd.next;
+                }
+            }
+            traversal=traversal.next;
+            
+        }
+        if(smallEnd!=null)
+        { smallEnd.next=null;}
+        if(listEnd!=null)
+        listEnd.next=null;
+         
+        if(smallEnd!=null)
+        {smallEnd.next=listHead;
+        
+        head=smallHead;
+        }
+        else{
+            head=listHead;
+        }
+        return head;
+        
+//         head=listHead;
+//         ListNode nextsmall=null;
+//         ListNode temp=null;
+//         ListNode current=listHead;
+//     while(smallHead!=null){
+//         current=listHead;
+        
+//         while(current.val!=x){
+            
+//             if(current.val>smallHead.val){
+//                 nextsmall=smallHead.next;
+//                 smallHead.next=current;
+//                  if(temp==null){
+//                     current=smallHead;
+//                      listHead=current;
+//                  }   
+//                 else{
+//                     temp.next=smallHead;
+                    
+//                 }
+//                 break;
+//             }
+            
+//             temp=current;
+//             current=current.next;
+           
+//         }
+//         if(current.val==x && smallHead!=null){
+//                  if(current.val>=smallHead.val){
+//                         nextsmall=smallHead.next;
+//                         smallHead.next=current;
+//                          if(temp==null){
+//                             current=smallHead;
+//                              listHead=current;
+//                          }   
+//                         else{
+//                             temp.next=smallHead;
+
+//                         }
+
+//                     }
+//                 break;
+//             } 
+        
+//         smallHead=nextsmall;
+    
+        
+        
+//     }        
+        
+        
+//     return listHead;    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
