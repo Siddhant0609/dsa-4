@@ -1,0 +1,31 @@
+class Solution {
+    public String simplifyPath(String path) {
+        
+        String[] file=path.split("/");
+        String ans="";
+        Stack<String> str=new Stack<String>();
+        for(String s:file){
+            if(s.equals(".")){
+                
+            }
+            else if(s.equals("..")){
+                if(str.empty()!=true){
+                    str.pop();
+                }
+            }
+            else if(s.length()>0){
+                str.push(s);
+            }
+        
+        }
+        
+        if(str.empty()){
+            return "/";
+        }
+        while(!str.empty()){
+            ans="/"+str.pop()+ans;
+        }
+        
+        return ans;
+    }
+}
