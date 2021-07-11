@@ -1,0 +1,96 @@
+class MyQueue {
+
+    /** Initialize your data structure here. */
+   Stack<Integer> st;
+     public MyQueue() {
+        st=new Stack<Integer>();
+    }
+    
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        st.push(x);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+        if(st.size()==1){
+            return st.pop();
+        }
+        else{
+            int item=st.pop();
+            int returneditem=pop();
+            st.push(item);
+            return returneditem;
+            
+        }
+    }
+    
+    /** Get the front element. */
+    public int peek() {
+        if(st.size()==1){
+            return st.peek();
+        }
+        else{
+            int item=st.pop();
+            int returneditem=peek();
+            st.push(item);
+            return returneditem;
+            
+        }
+    }
+    
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+        return st.empty();
+    }
+}
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+
+
+// /*class MyQueue {
+
+//     Stack<Integer> st;
+//     Stack<Integer> st2;
+//     /** Initialize your data structure here. */
+//     public MyQueue() {
+//         st=new Stack<Integer>();
+//         st2=new Stack<Integer>();
+//     }
+    
+//     /** Push element x to the back of queue. */
+//     public void push(int x) {
+//         while(st.empty()==false){
+//             st2.push(st.pop());
+            
+//         }
+        
+//         st.push(x);
+//         while(st2.empty()==false){
+//             st.push(st2.pop());
+//         }
+//     }
+    
+//     /** Removes the element from in front of queue and returns that element. */
+//     public int pop() {
+//        return st.pop();
+//     }
+    
+//     /** Get the front element. */
+//     public int peek() {
+//         return st.peek();
+//     }
+    
+//     /** Returns whether the queue is empty. */
+//     public boolean empty() {
+//         return st.empty();
+//     }
+// }
+// */
