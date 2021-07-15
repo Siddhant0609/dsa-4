@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
@@ -253,6 +255,7 @@ public class BinaryTreeOperations {
 		}
 	}
 	
+	// DFT
 	public void getVerticalOrder(BinaryTree<Integer> root, int distance, TreeMap<Integer, ArrayList<Integer>> map) {
 		if(root == null) {
 			return;
@@ -269,6 +272,56 @@ public class BinaryTreeOperations {
 		}
 		getVerticalOrder(root.left, distance - 1, map);
 		getVerticalOrder(root.right, distance + 1, map);
+	}
+	
+	class Pair<T> {
+		BinaryTree<T> node;
+		int level;
+		Pair(BinaryTree<T> node, int level) {
+			this.node = node;
+			this.level = level;
+		}
+	}
+	
+	// BFT
+	public void verticalOrderIter(BinaryTree<Integer> root) {
+		LinkedList<Pair<Integer>> queue = new LinkedList<BinaryTreeOperations.Pair<Integer>>();
+		HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+		queue.add(new Pair<Integer>(root, 0));
+		int minDistance = 0, maxDistance = 0;
+		while(!queue.isEmpty()) {
+			int size = queue.size();
+			while(size > 0) {
+				Pair<Integer> pair = queue.removeFirst();
+				minDistance = Math.min(minDistance, pair.level);
+				maxDistance = Math.max(maxDistance, pair.level);
+				// If map key is not present, so create a new array list object and add it to map
+//				if(map.get(pair.level) == null) {
+//					List<Integer> list = new ArrayList<Integer>();
+//					list.add(pair.node.data);
+//					map.put(pair.level, list);
+//				}
+//				else {
+//					List<Integer> list = map.get(pair.level);
+//					list.add(pair.node.data);
+//					map.put(pair.level, list);
+//				}
+				
+				map.putIfAbsent(pair.level, new ArrayList<Integer>());
+				map.get(pair.level).add(pair.node.data);
+				
+				if(pair.node.left != null) {
+					queue.add(new Pair<Integer>(pair.node.left, pair.level-1));
+				}
+				else if(pair.node.right != null) {
+					queue.add(new Pair<Integer>(pair.node.right, pair.level+1));
+				}
+				size--;
+			}
+		}
+		for(int i = minDistance; i<= maxDistance; i++) {
+			System.out.println(i + " " + map.get(i));
+		}
 	}
 	
 	public void topView(BinaryTree<Integer> root) {
